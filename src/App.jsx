@@ -1,6 +1,6 @@
 import data from "./data/CompanyData.js";
 import {useEffect, useState} from "react";
-import {Button, Input, Table, TableContainer, Tbody, Td, Th, Thead, Tr} from "@chakra-ui/react";
+import {Button, Center, Heading, Input, Table, TableContainer, Tbody, Td, Th, Thead, Tr} from "@chakra-ui/react";
 
 function App() {
     const [filteredData, setFilteredData] = useState([]);
@@ -33,9 +33,10 @@ function App() {
     };
 
     return (
-        <div>
+        <Center>
 
             <TableContainer maxWidth={'60%'}>
+                <Heading>Netzbetreiber Suche</Heading>
                 <Input
                     className={'mt-3 mb-3'}
                     type="text"
@@ -67,7 +68,7 @@ function App() {
                 </Table>
             </TableContainer>
 
-        </div>
+        </Center>
     );
 }
 
